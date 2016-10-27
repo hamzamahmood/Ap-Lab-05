@@ -19,11 +19,10 @@ def all_files(key_word):
 				dict[dir2].append(os.path.join(path,directory))
 		for name in files:
 			n2 = name.lower()
-			if (name.endswith('.txt') or name.endswith('.doc') or name.endswith('.csv') or name.endswith('.xls')):
-				if(name not in dict):
-					dict[n2] = [os.path.join(path,name)]
-				else:
-					dict[n2].append(os.path.join(path,name))
+			if(name not in dict):
+				dict[n2] = [os.path.join(path,name)]
+			else:
+				dict[n2].append(os.path.join(path,name))
 
 print "Please wait while keywords and paths are stored into a dictionary!"
 all_files('.txt')
